@@ -46,7 +46,7 @@ Requesten blir da sendt til serveren på den gitte URLen, og postman viser oss s
 
 ![Skjermdump: Respons fra en request](./img/postman_response.png)
 
-#### Oppgave: Hente alle poster
+#### Oppgave: Hente alle innlegg
 
 Opprett en GET request i samme kolleksjon som henter alle innleggene fra endepunktet:
 
@@ -67,3 +67,44 @@ I kolleksjonen velger vi "Autorization"-tabben. I "Type" menyen velger du "Beare
 Nå vil tokenet automatisk brukes i alle requests i kolleksjonen.
 
 ### Repetisjon: Request med POST
+
+Vi skal nå opprette en ny bruker på serveren. For å gjøre dette må vi gjøre en request av typen POST.
+
+For å opprette en ny request er det enkleste å duplisere en eksisterende ved å trykke på "···"-menyen og velge "Duplicate" eller ved å bruke snarveien "⌘D"
+
+![Skjermdump: Hvordan duplisere en request i postman](./img/postman_duplicate.png)
+
+Vi endrer navnet på requesten til "Opprett bruker", limer inn samme URL som da vi hentet brukere, og trykker på "GET" for å velge metoden "POST" i menyen. Request blir da slik:
+
+![Skjermdump: Hvordan duplisere en request i postman](./img/postman_post_request.png)
+
+Hvis vi trykker "Send" får vi se at serveren mottar requesten vår, godtar autoriseringen, men ikke godtar requesten. Dette er fordi requesten mangler informasjon om den nye brukeren vi skal opprette. Vi kjenner igjen feltene `email`, `name`, `gender` og `status` fra svaret på GET-requesten vi sendte tidligere.
+
+Denne informasjonen skal vi legge i **body** i requesten. Vi bruker JSON-format, samme format som i svaret vi fikk. Velg "Body"-taben, velg "raw" og trykk på "Text" for å få opp meny hvor du kan velge "JSON". Da får vi hjelp av postman til å skrive riktig JSON.
+
+![Skjermdump: Hvordan velge JSON som body i postman](./img/postman_body.png)
+
+I denne tekstboken fyller vi inn JSON med informasjon om brukeren, f.eks:
+
+```javascript
+{
+    "email": "test@email.com",
+    "name": "Andreas Test",
+    "gender": "male",
+    "status": "active"
+}
+```
+
+Vi har navn på feltet til venstre og verdien til høyre, skilt av et kolon ":". Mellom hvert par av navn og verdi har vi et komma.
+
+Når vi trykker "Send" får vi svar med den nye brukeren som er opprettet:
+
+![Skjermdump: Svaret fra en POST-request i postman](./img/postman_post_response.png)
+
+#### Oppgave: Opprett et innlegg
+
+Opprett en POST request i samme kolleksjon som oppretter ett innlegg med endepunktet:
+
+```https://gorest.co.in/public/v1/posts```
+
+Du kan se hvilke felter som trenger å være med i svaret på GET-requesten, eller i feilmeldingen om du sender en tom POST-request.
