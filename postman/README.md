@@ -111,11 +111,11 @@ Du kan se hvilke felter som trenger å være med i svaret på GET-requesten, ell
 
 Vi har nå repetert hvordan vi bruker Postman til å gjøre REST API Requester mot en server.
 
-Requesten består av fire deler:
+En Request består av fire deler:
 
-1. en **URL** som sier hvilken ressurs det er vi skal gjøre noe med. Hvis vi skal gjøre noe med brukere, kan den være https://gorest.co.in/public/v1/users.
+1. en **URL** som sier hvilken ressurs det er vi skal gjøre noe med. I eksemplene over gjør vi noe users, så dermed er urlen https://gorest.co.in/public/v1/users.
 
-2. en **metode** som sier hva det er vi skal gjøre med ressursen. Vi bruker metoden "GET", når vi hente ut brukere. Vi bruker metoden "POST" når vi opprette en ny.
+2. en **metode** som sier hva det er vi skal gjøre med ressursen. Vi bruker metoden "GET" når vi henter ut brukere. Vi bruker metoden "POST" når vi oppretter en ny.
 
 3. **Headere**. Disse har postman fylt ut for oss, så vi kommer tilbake til dem senere.
 

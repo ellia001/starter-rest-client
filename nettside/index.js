@@ -22,9 +22,8 @@ function handleGetPosts() {
     console.log("Get Posts called, function TODO")
 }
 
-function handleCreateUser(event, form) {
-    // Denne må med for at submit ikke skal laste poste noe selv
-    event.preventDefault()
+function handleCreateUser() {
+    form = document.getElementById("createUserForm")
 
     // Setter opp headers
     const headers = new Headers();
@@ -42,4 +41,8 @@ function handleCreateUser(event, form) {
             console.log(json)
         })
     });
+}
+
+function handleCreatePost() {
+    console.log("Create Post called, function TODO")
 }
