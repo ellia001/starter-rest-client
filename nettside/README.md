@@ -10,11 +10,11 @@ For å gjøre oppgavene må du laste ned koden til din datamaskin. Bruke gjerne 
 
 ## Hent brukere med javascript
 
-På nettsiden har vi fire knapper, tilhørende de samme fire requestene som vi gjorde i Postman. Requetene for å hente brukere og for å opprette en ny bruker er implementert. Prøv dem ut. Resultatene kommer i ganske stygt format i konsollen (F12).
+På nettsiden har vi fire knapper, tilhørende de samme fire requestene som vi gjorde i Postman. Requestene for å hente brukere og for å opprette en ny bruker er implementert. Prøv dem ut. Resultatene kommer i ganske stygt format i konsollen (F12).
 
 "Create User" vil gi feilmeldingen "401 Unauthorized" frem til du har kopiert inn access-tokenet inn i index.js. (Det er ikke bra å legge passord og tokens ut på github.)
 
-Her kan vi se implementasjonen i javascript av de samme requestene som vi gjorde i postman. Vi bruker den innbygde javascript-metoden `fetch()` (for mer info https://developer.mozilla.org/en-US/docs/Web/API/fetch). "Get users" trenger kun to av de fire elementene: URL og metoden "GET". Når vi bruker `fetch()`er urlen første argument (lagret i konstanten `gorestUsers`), og andre argument er et javascript object (et format som ligner på JSON), som her spesifiserer at metoden er "GET".
+I `index.js` kan vi se implementasjonen i javascript av de samme requestene som vi gjorde i postman. Vi bruker den innbygde javascript-metoden `fetch()` (for mer info https://developer.mozilla.org/en-US/docs/Web/API/fetch). "Get users" trenger kun to av de fire elementene: URL og metoden "GET". Når vi bruker `fetch()`er urlen første argument (lagret i konstanten `gorestUsers`), og andre argument er et javascript object (et format som ligner på JSON), som her spesifiserer at metoden er "GET".
 
 Responsen fra serveren håndteres av funksjonen som er definert inne i `then()`, vi henter ut json fra svaret med `.json()`, som utløser en ny `then()`, hvor vi tilslutt skriver resultatet til konsollet.
 
@@ -51,6 +51,10 @@ Men på denne måten kan vi skrive mindre kode.
 Utvid html-formen `createPostForm` og implementer funksjonen `handleCreatePost()`slik at den oppretter innlegg mot:
 
 ```https://gorest.co.in/public/v1/posts```
+
+## Innlevering:
+
+Du skal levere oppgavene i teams. Du kan levere enten en lenke til et github repository (husk å invitere meg om det er et private repository), eller en zip med koden din.
 
 ## Bonusoppgave:
 
