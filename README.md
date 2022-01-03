@@ -42,7 +42,7 @@ Med alle verdiene satt kan vi trykke på Send-knappen helt til høyre:
 
 ![Skjermdump: Hvordan sende en request](./img/postman_send_request.png)
 
-Requesten blir da sendt til serveren på den gitte URLen, og postman viser oss svarer vi får tilbake i JSON-format:
+Requesten blir da sendt til serveren på den gitte URLen, og postman viser oss svaret, en **Response**, vi får tilbake i JSON-format:
 
 ![Skjermdump: Respons fra en request](./img/postman_response.png)
 
@@ -108,3 +108,22 @@ Opprett en POST request i samme kolleksjon som oppretter ett innlegg med endepun
 ```https://gorest.co.in/public/v1/posts```
 
 Du kan se hvilke felter som trenger å være med i svaret på GET-requesten, eller i feilmeldingen om du sender en tom POST-request.
+
+### Oppsummering
+
+Vi har nå repetert hvordan vi bruker Postman til å gjøre REST API Requester mot en server.
+
+Requesten består av fire deler:
+
+1. en **URL** som sier hvilken ressurs det er vi skal gjøre noe med. Hvis vi skal gjøre noe med brukere, kan den være https://gorest.co.in/public/v1/users.
+
+2. en **metode** som sier hva det er vi skal gjøre med ressursen. Vi bruker metoden "GET", når vi hente ut brukere. Vi bruker metoden "POST" når vi opprette en ny.
+
+3. **Headere**. Disse har postman fylt ut for oss, så vi kommer tilbake til dem senere.
+
+4. Requesten kan også ha en **Body**, hvis vi skal laste opp informasjon. 
+
+
+Svaret vi får tilbake på en Request er en **Response**. En response har også headere og kan ha en body, men har ikke en URL eller en metode.
+
+Body i Request og Response kan være i ulike format. Vi har sett formatet JSON, som er veldig vanlig. Når du åpner en vanlig webside blir det gjort en GET-request mot URLen i nettleseren. Nettsiden du får se er i Responsen sin body. Formatet er da HTML.
