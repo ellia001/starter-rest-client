@@ -50,6 +50,8 @@ Opprett en GET request i samme kolleksjon som henter alle innleggene fra endepun
 
 ```https://gorest.co.in/public/v1/posts```
 
+Ta et skjermbilde av den ferdige requesten med Request og Response i synlig.
+
 ## Repetisjon: Request med autorisering
 
 Vi skal nå gå videre til requester hvor vi kan opprette brukere og innlegg, men da trenger vi å autorisere oss. Vi skal bruke en **token** som vi sender med sammen med requesten vår for å bevise at vi har tilgang til å opprette ting i nettsiden.
@@ -107,6 +109,8 @@ Opprett en POST request i samme kolleksjon som oppretter ett innlegg med endepun
 
 Du kan se hvilke felter som trenger å være med i svaret på GET-requesten, eller i feilmeldingen om du sender en tom POST-request.
 
+Ta et skjermbilde av den ferdige requesten med Request og Response i synlig.
+
 ## Oppsummering
 
 Vi har nå repetert hvordan vi bruker Postman til å gjøre REST API Requester mot en server.
@@ -125,3 +129,7 @@ En Request består av fire deler:
 Svaret vi får tilbake på en Request er en **Response**. En response har også headere og kan ha en body, men har ikke en URL eller en metode.
 
 Body i Request og Response kan være i ulike format. Vi har sett formatet JSON, som er veldig vanlig. Når du åpner en vanlig webside blir det gjort en GET-request mot URLen i nettleseren. Nettsiden du får se er i Responsen sin body. Formatet er da HTML.
+
+## Innlevering
+
+Du skal levere inn i de to skjermbildene i teams.
