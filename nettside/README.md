@@ -34,17 +34,9 @@ Hvis du nå fyller ut skjemaet i `index.html` vil "Send inn" knappen nå opprett
 
 Create User ser ganske lik ut som get user, men har alle fire elementene i en request. URL som første arguement til `fetch()`, og javascript-objectet har metode, headers og body.
 
-**Headers** ble som nevnt tidligere automatisk opprettet av postman, men i javascript må vi opprette dem selv. En **header** er et par av nøkkel og verdi, litt som JSON. Headeren `Authorization` brukes for å legge ved autorisering, som en token. Et annet eksempel er `Content-Type`, som sier hvilket format innholdet i requesten er på. I dette tilfellet vil servere gjette at innholdet vårt er JSON, men hvis ikke måtte vi satt den til `application/json` for å vise at innholdet vi sender er JSON. 
+**Headers** ble som nevnt tidligere automatisk opprettet av postman, men i javascript må vi opprette dem selv. En **header** er et par av nøkkel og verdi, litt som JSON. Headeren `Authorization` brukes for å legge ved autorisering, som en token. Et annet eksempel er `Content-Type`, som sier hvilket format innholdet i requesten er på. I noen tilfeller kan serveren gjette hva slags innhold vi sender, men vi setter `application/json` for å vise at innholdet vi sender er JSON. Da er vi helt sikre på at requesten blir mottatt riktig.
 
-Vi ser her at javascript kan konvertere en html-form direkte til JSON. Her blir navnet på feltet "name" fra html-formen, og verdi i feltet den tilhørende verdien fra html-formen. Vi kunne også skrevet body eksplisitt slik:
-```javascript
-fetch(gorestUsers, {
-    "method" : "POST",
-    "headers": headers,
-    "body": {"name": "Andreas", document.getElementById("name") ... }
-})
-```
-Men på denne måten kan vi skrive mindre kode.
+Vi henter ut hver enkelt verdi fra formen og legger det i et javascript object. Det viktigst å få med seg er at et javascript-objekt blir til JSON når vi bruker JSON.stringify. Hvis du er nysgjerrig på hvordan man kan gjøre dette uten å skrive hver enkelt verdi kan du se her: https://www.learnwithjason.dev/blog/get-form-values-as-json
 
 ### Oppgave: opprett innlegg:
 

@@ -23,16 +23,25 @@ function handleGetPosts() {
 }
 
 function handleCreateUser() {
-    form = document.getElementById("createUserForm")
+    userName = document.getElementById("name")
+    email = document.getElementById("email")
+    gender = document.getElementById("gender")
+    status = document.getElementById("status")
 
     // Setter opp headers
     const headers = new Headers();
     headers.append("Authorization", "Bearer " + token)
+    headers.append("Content-Type", "application/json")
 
     fetch(gorestUsers, {
         "method" : "POST",
         "headers": headers,
-        "body": new FormData(form)
+        "body": JSON.stringify({
+            "name": userName,
+            "email": email,
+            "gender": gender,
+            "status": status
+        }) // et javascript-object kan vi gjøre til JSON med json-stringify
     }).then(function(response) {
         // Håndterer responsen
 
