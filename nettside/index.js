@@ -23,10 +23,10 @@ function handleGetPosts() {
 }
 
 function handleCreateUser() {
-    userName = document.getElementById("name")
-    email = document.getElementById("email")
-    gender = document.getElementById("gender")
-    status = document.getElementById("status")
+    userName = document.getElementById("name").value
+    email = document.getElementById("email").value
+    gender = document.getElementById("gender").value
+    status = document.getElementById("status").value
 
     // Setter opp headers
     const headers = new Headers();
