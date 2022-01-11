@@ -7,7 +7,6 @@ For å gjøre oppgavene må du laste ned koden til din datamaskin. Bruke gjerne 
 ![Skjermdump: Svaret fra en POST-request i postman](./img/github_download.png)
 
 Åpne `index.html` i en nettleser. Dette er en enkel nettside som fort avslører at jeg ikke er noen designer.
-
 ## Hent brukere med javascript
 
 På nettsiden har vi fire knapper, tilhørende de samme fire requestene som vi gjorde i Postman. Requestene for å hente brukere og for å opprette en ny bruker er implementert. Prøv dem ut. Resultatene kommer i ganske stygt format i konsollen (F12).
