@@ -1,12 +1,11 @@
-# Repetisjon av Postman
-
-Først skal vi repetere hvordan vi bruker et API med Postman som klient. Vi skal bruke samme API som sist på siden gorest.co.in.
+# REST API med Postman
+Først skal vi repetere hvordan vi bruker et API med Postman som klient. Vi skal bruke nettsiden APIet på nettsiden gorest.co.in (samme som sist).
 
 Gå inn på:
 ```postman.com```
 og logg inn med brukeren din.
 
-## Repetisjon: Sette opp collection i Postman
+## Sette opp collection i Postman
 
 For å holde ting ryddig i postman skal vi opprette en **collection** som skal inneholde alle **requestene** vi skriver.
 
@@ -31,7 +30,7 @@ Da får vi opp vinduet for å redigere den nye requesten.
 
 Øverst er navnet på requesten. Det er bare for vår egen den for å holde styr på ting. Vi kan kalle denne "Hent alle brukere".
 
-Nedenfor skriver URLen for requesten, vi skal hente ut brukerene i gorest-siden, urlen blir derfor:
+Nedenfor skriver vi URLen for requesten. Vi skal hente ut brukerene i gorest-siden, urlen blir derfor:
 
 ```https://gorest.co.in/public/v1/users```
 
@@ -50,9 +49,11 @@ Opprett en GET request i samme kolleksjon som henter alle innleggene fra endepun
 
 ```https://gorest.co.in/public/v1/posts```
 
-Ta et skjermbilde av den ferdige requesten med Request og Response i synlig.
+For å opprette en ny request er det enkleste å duplisere en eksisterende ved å trykke på "···"-menyen og velge "Duplicate" eller ved å bruke snarveien "⌘D"
 
-## Repetisjon: Request med autorisering
+Ta et skjermbilde av den ferdige requesten med både Request og Response synlig.
+
+## Request med autorisering
 
 Vi skal nå gå videre til requester hvor vi kan opprette brukere og innlegg, men da trenger vi å autorisere oss. Vi skal bruke en **token** som vi sender med sammen med requesten vår for å bevise at vi har tilgang til å opprette ting i nettsiden.
 
@@ -74,17 +75,17 @@ For å opprette en ny request er det enkleste å duplisere en eksisterende ved �
 
 ![Skjermdump: Hvordan duplisere en request i postman](./img/postman_duplicate.png)
 
-Vi endrer navnet på requesten til "Opprett bruker", limer inn samme URL som da vi hentet brukere, og trykker på "GET" for å velge metoden "POST" i menyen. Request blir da slik:
+Vi endrer navnet på requesten til "Opprett bruker", limer inn samme URL som da vi hentet brukere, og trykker på "GET" for å velge metoden "POST" i menyen. Requesten blir da slik:
 
 ![Skjermdump: Hvordan duplisere en request i postman](./img/postman_post_request.png)
 
 Hvis vi trykker "Send" får vi se at serveren mottar requesten vår, godtar autoriseringen, men ikke godtar requesten. Dette er fordi requesten mangler informasjon om den nye brukeren vi skal opprette. Vi kjenner igjen feltene `email`, `name`, `gender` og `status` fra svaret på GET-requesten vi sendte tidligere.
 
-Denne informasjonen skal vi legge i **body** i requesten. Vi bruker JSON-format, samme format som i svaret vi fikk. Velg "Body"-taben, velg "raw" og trykk på "Text" for å få opp meny hvor du kan velge "JSON". Da får vi hjelp av postman til å skrive riktig JSON.
+Denne informasjonen skal vi legge i **body** i requesten. Vi bruker JSON-format, samme format som i svaret vi fikk. Velg "Body"-taben, velg "raw" og trykk på "Text" for å få opp meny hvor du kan velge "JSON". Da får vi hjelp av postman til å skrive riktig JSON, og postman vil også sende rikitg
 
-![Skjermdump: Hvordan velge JSON som body i postman](./img/postman_body.png)
+![Skjermdump: Hvordan velge JSON som body i postman](./img/postman_empty_body.png)
 
-I denne tekstboken fyller vi inn JSON med informasjon om brukeren, f.eks:
+I tekstboksen rett under URL (hvor det er `{}` i eksempel-bildet) fyller vi inn JSON med informasjon om brukeren, f.eks:
 
 ```javascript
 {
