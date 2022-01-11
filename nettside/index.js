@@ -49,7 +49,8 @@ function handleCreateUser() {
 
         // Vi henter ut json-bodyen i responsen med .json()
         response.json().then(function(json) {
-            console.log(json)
+            document.getElementById("createUserStatusCode").value = response.status + " " + response.statusText
+            document.getElementById("createUserResponseArea").value = JSON.stringify(json)
         })
     });
 }
