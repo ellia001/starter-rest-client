@@ -81,7 +81,7 @@ Vi endrer navnet på requesten til "Opprett bruker", limer inn samme URL som da 
 
 Hvis vi trykker "Send" får vi se at serveren mottar requesten vår, godtar autoriseringen, men ikke godtar requesten. Dette er fordi requesten mangler informasjon om den nye brukeren vi skal opprette. Vi kjenner igjen feltene `email`, `name`, `gender` og `status` fra svaret på GET-requesten vi sendte tidligere.
 
-Denne informasjonen skal vi legge i **body** i requesten. Vi bruker JSON-format, samme format som i svaret vi fikk. Velg "Body"-taben, velg "raw" og trykk på "Text" for å få opp meny hvor du kan velge "JSON". Da får vi hjelp av postman til å skrive riktig JSON, og postman vil også sende rikitg
+Denne informasjonen skal vi legge i **body** i requesten. Vi bruker JSON-format, samme format som i svaret vi fikk. Velg "Body"-taben, velg "raw" og trykk på "Text" for å få opp meny hvor du kan velge "JSON". Det trenger vi for at postman skal sende riktig, og vi får også syntax-hjelp i body-vinduet.
 
 ![Skjermdump: Hvordan velge JSON som body i postman](./img/postman_empty_body.png)
 
@@ -108,7 +108,7 @@ Opprett en POST request i samme kolleksjon som oppretter ett innlegg med endepun
 
 ```https://gorest.co.in/public/v1/posts```
 
-Du kan se hvilke felter som trenger å være med i svaret på GET-requesten, eller i feilmeldingen om du sender en tom POST-request.
+Du kan se hvilke felter som trenger å være med i svaret på GET-requesten, eller i feilmeldingen om du sender en tom POST-request. 
 
 Ta et skjermbilde av den ferdige requesten med Request og Response i synlig.
 
