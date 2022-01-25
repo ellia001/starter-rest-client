@@ -43,10 +43,13 @@ Utvid html-formen `createPostForm` og implementer funksjonen `handleCreatePost()
 
 ```https://gorest.co.in/public/v1/posts```
 
+MERK: Create post har et felt `userId` som må være id til en faktisk bruker. Du kan finne en verdi i responsen fra "create user" eller ved å gjøre "get user". Du må ikke bruker userid for brukeren du har opprettet.
+
 ## Innlevering:
 
 Du skal levere oppgavene i teams. Du kan levere enten en lenke til et github repository (husk å invitere meg om det er et private repository), eller en zip med koden din.
 
-## Bonusoppgave:
+## Bonusoppgaver:
+* Hent userid fra responsen fra "create user" og bruk denne automatisk i "create post"
 
-Bruk javascript til å generere html utfra responsene fra serveren, og legg inn denne htmlen i nettsiden.
+* Bruk javascript til å generere html utfra responsene fra serveren, og legg inn denne htmlen i nettsiden.
