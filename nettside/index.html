@@ -96,11 +96,29 @@
         <div class="container">
             <form id="createPostForm" method="POST" onsubmit="handleCreatePost(event,this)">
                 <div class="form-group">
-                    TODO
+                    <div class="form-group">
+                        <label class="col-md-4" for="user">User</label>
+                        <input class="col-md-4" type="user" name="user" id="user">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-md-4" for="user-id">User-id</label>
+                        <input class="col-md-4" type="user_id" name="user-id" id="user_id">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-md-4" for="title">Title</label>
+                        <input class="col-md-4" type="title" name="title" id="title">    
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-md-4" for="body">Body</label>
+                        <input class="col-md-4" type="body" name="body" id="body">    
+                    </div>
                 </div>
                 
                 <div>
-                    <input type="submit">
+                    <button onclick="handleCreatePost()">Create Post</button>
                 </div>
             </form>
             <div>
